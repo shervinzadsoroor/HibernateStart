@@ -11,15 +11,26 @@ public class Incident {
     @Column(name = "id")
     private Long id;
 
+    public Incident() {
+    }
+
+
     //@Basic(fetch = FetchType.LAZY)
-    @Column(name = "title", nullable = false , length = 22)
+    @Column(name = "title", nullable = false, length = 22)
     private String title;
 
-    @Column(name = "description" , nullable = false)
+    @Column(name = "description", nullable = false)
     private String description;
 
-    @Column(name = "create_date" , nullable = false)
+    @Column(name = "create_date", nullable = false)
     private Date createDate;
+
+    public Incident(String title, String description, Date date) {
+        this.title = title;
+        this.description = description;
+        this.createDate = date;
+    }
+
 
     public Long getId() {
         return id;
@@ -63,6 +74,5 @@ public class Incident {
                 '}';
     }
 
-    public Incident() {
-    }
+
 }
