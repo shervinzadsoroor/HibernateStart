@@ -56,5 +56,6 @@ public class HobernateStartApplication {
         session.getTransaction().commit();
         session.close();
 
+
     }
 }
